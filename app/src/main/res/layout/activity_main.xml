@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lavender">
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="cursive"
+        android:text="Quote of the Day"
+        android:textSize="55dp">
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <!-- Add your card content here -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Teca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:text="This is a CardView" />
+
+            <!-- Star ImageButton -->
+            <ImageButton
+                android:id="@+id/starButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Star"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <!-- Share ImageButton -->
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/gray"
+                android:contentDescription="Share"
+                android:src="@android:drawable/ic_menu_share" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/refreshquote"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/myCardView"
+        android:layout_alignEnd="@+id/myCardView"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="130dp"
+        android:text="Refresh Quote">
+
+    </Button>
+
+    <Button
+        android:id="@+id/favoritequote"
+        android:layout_width="141dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/refreshquote"
+        android:layout_alignEnd="@+id/refreshquote"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="1dp"
+        android:text="Favorite Quote">
+
+    </Button>
+
+    <!-- Add a FloatingActionButton at the bottom far left corner -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+
+</RelativeLayout>
